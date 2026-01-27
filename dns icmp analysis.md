@@ -1,19 +1,22 @@
 
-Analyst: Anaswara raj
+Analyst: Anaswara raj 
+
 Date/Time of Incident:1.24pm
+
 Tool Used: tcpdump
+
 Client: YummyRecipesForMe.com
 
 
-Part 1 :  ANALYSIS REPORT
+# Part 1 :  ANALYSIS REPORT
 --------------------------
 
-1. Incident Description
+## 1. Incident Description
 
 Customers were unable to access the client’s website www.yummyrecipesforme.com. 
 Users reported receiving a “destination port unreachable” error.
 
-2. Investigation
+## 2. Investigation
 
 The analyst attempted to access the website and replicated the issue.
 Network packet capture was performed using tcpdump during the attempted connection.
@@ -21,7 +24,7 @@ Packet data showed outbound UDP packets from the client machine to the DNS serve
 In response, ICMP error messages were returned with the message "udp port 53 unreachable".
 
 
-3. Findings
+## 3. Findings
 
 The DNS request from the browser failed because UDP traffic to port 53 
 could not reach the destination server.
@@ -29,25 +32,25 @@ ICMP messages indicated that the DNS service was unavailable at that moment.
 As DNS resolution failed, the browser could not translate the domain name into an IP address, 
 leading to the website being inaccessible.
 
-4. Impact
+## 4. Impact
 
 Website users experienced downtime.
 DNS resolution for the domain was unavailable.
 Potential customer dissatisfaction or business interruption.
 
-5. Root Cause
+## 5. Root Cause
 
 DNS service not running or port 53 blocked by a firewall.
 The issue affected UDP port 53, the default port for DNS queries.
 
-6. Recommendation
+## 6. Recommendation
 
 Verify that the DNS server process is running on 203.0.113.2.
 Ensure firewall rules allow UDP traffic on port 53.
 Monitor DNS service availability using uptime or ICMP probes.
 Implement DNS redundancy (secondary DNS server).
 
-7. Network protocols used
+## 7. Network protocols used
 
 | Protocol | Layer     | Function                                |
 | -------- | --------- | --------------------------------------- |
@@ -58,7 +61,7 @@ Implement DNS redundancy (secondary DNS server).
 
 
 
-Part 2: Provide a summary of the problem found in the tcpdump log
+# Part 2: Provide a summary of the problem found in the tcpdump log
 ----------------------------------------------------------------
 
 The cybersecurity team providing IT services to their client organization are 
@@ -84,7 +87,7 @@ Misconfiguration on the DNS server.
 ---------------------
 
 
-Part 2: Explain your analysis of the data and provide at least one cause of the incident.
+## Part 3: Explain your analysis of the data and provide at least one cause of the incident.
 
 ---------------------------------------------------------------------------------------
 
