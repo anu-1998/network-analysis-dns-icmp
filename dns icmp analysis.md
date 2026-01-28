@@ -61,7 +61,7 @@ Implement DNS redundancy (secondary DNS server).
 
 
 
-# Part 2: Provide a summary of the problem found in the tcpdump log
+# Part 2: a summary of the problem found in the tcpdump log
 ----------------------------------------------------------------
 
 The cybersecurity team providing IT services to their client organization are 
@@ -87,7 +87,7 @@ Misconfiguration on the DNS server.
 ---------------------
 
 
-## Part 3: Explain your analysis of the data and provide at least one cause of the incident.
+## Part 3: Explaination of analysis of the data and provide at least one cause of the incident.
 
 ---------------------------------------------------------------------------------------
 
